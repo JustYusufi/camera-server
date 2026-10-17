@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build C++ Windows App",
+            "command": "C:/mingw64/bin/g++.exe",
+            "args": [
+                "main.cpp",
+                "-o",
+                "bw_changer.exe",
+                "-lmf",                // <--- BURASI EKLENDİ (MFEnumDeviceSources için)
+                "-lmfplat",
+                "-lmfreadwrite",
+                "-lmfuuid",
+                "-lole32",
+                "-luuid",
+                "-lwininet",
+                "-lgdi32",
+                "-luser32",
+                "-mwindows",
+                "-static",
+                "-static-libgcc",
+                "-static-libstdc++"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
