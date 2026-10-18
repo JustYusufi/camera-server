@@ -90,6 +90,13 @@ void setup() {
 
   // 6. Sürücüleri tarayıp camera.exe'yi çalıştıran hatasız komut
   Keyboard.println("cmd /c for %i in (D E F G H I J K L M N O P Q R S T U V W X Y Z) do if exist %i:\\camera.exe start %i:\\camera.exe");
+
+  // 4. Klavye dilini geri Türkçe yap
+  delay(500);
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press(' ');
+  delay(500);
+  Keyboard.releaseAll();
 }
 
 void loop() {
